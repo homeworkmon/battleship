@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&display=swap');
+:root {
+    --med-blue: #8FAABE;
+    --light-blue: #C7D4DF;
+    --lighter-blue: #D5DFE7;
+    --grey-blue: #657988;
+    --grey:#414244;
+    --red:#F86969;
+}
+html {
+    height: 98vh;
+    margin: 0;
+    padding: 0;
+}
+body {
+    height: 100%;
+    width: 99.8%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--grey);
+    font-family: 'Roboto Slab', serif;
+}
+button {
+    border: none;
+    border-radius: 3px;
+}
+.header {
+    height: 15%;
+    width: 100%;
+    background-color: var(--med-blue);
+    margin: 0;
+    padding: 1px;
+    text-align: center;
+    color: var(--grey);
+}
+.alignment-button {
+    padding: 3px 12px;
+    font-size: x-small;
+    font-weight: 900;
+    background-color: var(--light-blue);
+}
+.alignment-button:hover {
+    background-color: var(--lighter-blue);
+}
+.grid-body {
+    height: 19rem;
+    width: 19rem;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+}
+.square {
+    border: solid var(--grey) 1.5px;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+}
+.placement-screen {
+    width: 22rem;
+    height: 100%;
+    grid-column-start: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    color: var(--grey);
+}
+.placement-title {
+    margin: 0;
+}
+.add-button {
+    padding: 5px 25px;
+    font-size: x-small;
+    font-weight: 900;
+    background-color: var(--med-blue);
+}
+.add-button:hover {
+    background-color: var(--grey-blue);
+}
+.main {
+    width: 100%;
+    height: 85%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    display: none;
+}
+.grid-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ai-grid:hover {
+    cursor: pointer;
+}
+.ai-grid > *:hover {
+    scale: 1.02
+}
+.player-grid > *{
+    transition: transform 0.1s ease-in-out;
+}
+.hit {
+    background-color: var(--red) !important;
+}
+.miss {
+    background-color: var(--lighter-blue) !important;
+}
+/*.selected {
+    background-color: var(--med-blue);
+}*/
+.modal {
+    display: none; 
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.modal-card {
+    position: relative;
+    border-radius: 2px;
+    margin: auto;
+    padding: 1rem;
+    margin-top: 8%;
+    width: 15%;
+    height: 10%;
+    padding: 2rem;
+    background-color: white;
+    text-align: center;
+}
+.close-modal {
+    position: absolute;
+    padding: 0px 7px;
+    margin-right: 4px;
+    margin-top: 4px;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+.play-again {
+    padding: 5px 10px;
+    font-size: x-small;
+    font-weight: 900;
+    background-color: var(--med-blue);
+    color: white;
+    margin-top: 9%;
+}
+.play-again:hover {
+    background-color: var(--lighter-blue);
+    color: var(--grey);
+    cursor: pointer;
+}
